@@ -1,4 +1,5 @@
-// This function will convert any given number to a roman numeral
+// This function will convert any given number up to the maximum number possible by conventional
+// notation (3999) into a roman numeral
 
 function convertToRoman(num) {
   // define the powerKeys for the different powers of ten
@@ -19,7 +20,7 @@ function convertToRoman(num) {
       one: "M"
     }
   ];
-  
+
   const numLength = num.toString().length;
   let romanStringBuilder = [];
   const modulo = 10;
@@ -71,6 +72,7 @@ function convertToRoman(num) {
     multiplier *= modulo;
   }
   // combine the final string builder array into a string and return it
+  console.log(romanStringBuilder.join(""));
   return romanStringBuilder.join("");
 }
 
